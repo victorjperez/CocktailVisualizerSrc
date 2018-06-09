@@ -1,0 +1,28 @@
+
+{
+  "categories":[
+  {
+  "catName": "Tumbler", 
+  "cocktails":[ 
+    {
+      "name": "Grey Goose Le Citron Asian Mary",
+      "glass": "Tumbler",
+      "ingredients": [
+        ["Sake",1],
+        ["Grey Goose Le Citron Flavored Vodka",1.5],
+        ["Asian Mary Mix",3]]
+    }]
+  },
+  {
+    "catName": "Shot",
+    "cocktails": [
+    {
+      "name": "B-52",
+      "glass": "Shot",
+      "ingredients": [
+        ["Coffee liqueur",0.33],
+        ["Baileys Irish cream liqueur",0.33],
+        ["Grand Marnier liqueur",0.33]] 
+    }]
+  }]
+}
