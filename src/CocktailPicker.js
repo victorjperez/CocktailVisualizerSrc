@@ -5,7 +5,7 @@ import './CocktailPicker.css';
 // TODO: turn this into a class and add state for selected
 function Cocktail(props) {
   return (
-    <div className="picker-frame_item">
+    <div className="picker-frame__listItem">
       {props.name}
     </div>
   )
@@ -17,14 +17,14 @@ function CocktailsByGlass(props) {
     <Cocktail key={x.name} name={x.name} />
   );  
   return (
-    <div className={props.glass.catName}>{elements}</div>
+    <div className={"picker-frame__list picker-frame__list--" + props.glass.catName}>{elements}</div>
   );
 }
 class ProcessList extends React.Component{
   render() {
     var glasses = [];
     (CocktailFile.categories).forEach(category => {
-      glasses.push(<h2 key={category.catName}>{category.catName}</h2>);
+      glasses.push(<div key={category.catName} className={"picker-frame__categoryPlate picker-frame__categoryPlate--"+ category.catName} >{category.catName}</div>);
       glasses.push(<CocktailsByGlass key={category.catName + "_list"} glass={category} />)
     });
     return(

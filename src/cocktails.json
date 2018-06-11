@@ -23,6 +23,26 @@
         ["Coffee liqueur",0.33],
         ["Baileys Irish cream liqueur",0.33],
         ["Grand Marnier liqueur",0.33]] 
+    },
+    {
+      "name": "Tough to Hear",
+      "glass": "Shot",
+      "ingredients": [
+        ["Chile de árbol-infused St-Germain",1],
+        ["Leopold Brothers Absinthe Verte",1],
+        ["Lime juice",0.03]] 
     }]
-  }]
+  },
+  {
+    "catName": "Martini", 
+    "cocktails":[ 
+      {
+        "name": "Dry Martini",
+        "glass": "Tumbler",
+        "ingredients": [
+          ["Gin",2.5],
+          ["Dry vermouth",0.5],
+          ["Orange bitters",0.08]]
+      }]
+    }]
 }

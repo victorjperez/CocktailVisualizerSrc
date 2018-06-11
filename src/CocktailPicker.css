@@ -1,14 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+body {
+  font-family: 'Abril Fatface', cursive;
+}
+
 .picker-frame {
   height: 1000px;
   width: 400px;
   border-radius: 15px;
   background-color: lightgray;
-}
-.picker-frame__header {
-  background-color: gray;
-  color: white;
-  padding: 20px;
-  font-size: 25px;
   text-align: center;
+}
+
+.picker-frame__header {
+  color: darkslategray;
+  background-color: lightslategray;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
+  font-size: 1.5rem;
+  padding: 20px;
   border-radius: 15px 15px 0 0;
 }
+
+.picker-frame__categoryPlate {
+  padding: 5px;
+  font-size: 23px;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid darkgray;
+}
+
+.picker-frame__categoryPlate--Shot {
+  background-color: lightseagreen;
+  color: darkcyan;
+}
+
+.picker-frame__categoryPlate--Tumbler {
+  background-color: lightcoral;
+  color: darkred;
+}
+
+.picker-frame__categoryPlate--Martini {
+  background-color: goldenrod;
+  color: darkgoldenrod;
+}
+
+.picker-frame__listItem {
+  padding: 5px;
+  color: darkslategray;
+  transition-duration: .3s;
+  background-color: lightsteelblue;
+}
+
+.picker-frame__listItem:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+.picker-frame__listItem:hover {
+  background-color: lightslategray;
+}
+/*# sourceMappingURL=CocktailPicker.css.map */
