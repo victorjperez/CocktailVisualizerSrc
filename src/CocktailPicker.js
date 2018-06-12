@@ -4,41 +4,80 @@ import './CocktailPicker.css';
 import martiniGlass from './assets/martini-glass.svg';
 import shotGlass from './assets/shot-glass.svg';
 import tumblerGlass from './assets/tumbler-glass.svg';
+import add from './assets/add.svg';
+import multiply from './assets/multiply.svg';
 var images = [martiniGlass, shotGlass, tumblerGlass];
 
 function Drink(props) {
   return (
-    <div className="picker-frame__listItem">
+    <div className="picker-frame__list-item">
       {props.name}
     </div>
   )
 }
+
 function DrinkList(props) {
   const elements = (props.drinks).map((x) =>
     <Drink key={x.name} name={x.name} />
   );
-  return(
-    <div className="picker-frame__list" > { elements }</div>
-  );
-}
-class CategoryHeader extends React.Component {
-  render() {
+  if (props.visibile) {
     return (
-      <div className={"picker-frame__categoryPlate picker-frame__categoryPlate--" + this.props.categoryName}>
-        <img src={getGlassImage(this.props.categoryName)} alt="" />
-        {this.props.categoryName}
-      </div>
-
+      <div className="picker-frame__list" > {elements}</div>
     );
   }
-
+  return null;
 }
+function AccordianIcon(props){
+  var accordionIconVals = [];
+  if (props.visible) {
+    accordionIconVals[0] = multiply;
+    accordionIconVals[1] = "collapse";
+  } else {
+    accordionIconVals[0] = add;
+    accordionIconVals[1] = "expand";
+  }
+  return <img className="picker-frame__accordian-icon" src={accordionIconVals[0]} alt={accordionIconVals[1]} />
+}
+class CategoryHeader extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(e) {
+    this.props.onVisibilityToggle();
+  }
+  render() {
+    var bemClassName = "picker-frame__category-plate picker-frame__category-plate--" + this.props.categoryName;
+
+    return (
+      <div onClick={this.handleClick} className={bemClassName}>
+        <img className="picker-frame__glass-icon" src={getGlassImage(this.props.categoryName)} alt="" />
+        {this.props.categoryName}
+        <AccordianIcon visible={this.props.visible}/>
+      </div>
+    );
+  }
+}
+//TODO: this will be given a state (collapsed/visibile), and will pass it down to drinkList and up from CategoryHeader
 class GlassCategory extends React.Component {
+  constructor(props) {
+    super(props);
+    this.toggleVisible = this.toggleVisible.bind(this);
+    this.state = { visibile: true };
+  }
+
+  toggleVisible() {
+    if (this.state.visibile)
+      this.setState({ visibile: false });
+    else
+      this.setState({ visibile: true });
+  }
+
   render() {
     return (
       <div className="picker-frame__category">
-        <CategoryHeader categoryName={this.props.categoryName} />
-        <DrinkList drinks={this.props.drinks} categoryName={this.props.categoryName} />
+        <CategoryHeader visible={this.state.visibile} onVisibilityToggle={this.toggleVisible} categoryName={this.props.categoryName} />
+        <DrinkList visibile={this.state.visibile} drinks={this.props.drinks} categoryName={this.props.categoryName} />
       </div>
     );
   };
