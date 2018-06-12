@@ -1,14 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
 body {
   font-family: 'Abril Fatface', cursive;
+  background-color: white;
 }
 
 .picker-frame {
-  height: 1000px;
+  height: 100%;
   width: 400px;
   border-radius: 15px;
   background-color: lightgray;
   text-align: center;
+  float: right;
 }
 
 .picker-frame__header {
@@ -25,6 +27,16 @@ body {
   font-size: 23px;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
   border-bottom: 1px solid darkgray;
+  position: relative;
+}
+
+.picker-frame__categoryPlate img {
+  height: 100%;
+  width: 30px;
+  left: 10px;
+  top: 0;
+  position: absolute;
+  fill: yellow;
 }
 
 .picker-frame__categoryPlate--Shot {
@@ -40,6 +52,12 @@ body {
 .picker-frame__categoryPlate--Martini {
   background-color: goldenrod;
   color: darkgoldenrod;
+}
+
+.picker-frame__collapser {
+  position: absolute;
+  top: 5px;
+  right: 10px;
 }
 
 .picker-frame__listItem {

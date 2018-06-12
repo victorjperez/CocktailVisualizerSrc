@@ -38,7 +38,7 @@
     "cocktails":[ 
       {
         "name": "Dry Martini",
-        "glass": "Tumbler",
+        "glass": "Martini",
         "ingredients": [
           ["Gin",2.5],
           ["Dry vermouth",0.5],
