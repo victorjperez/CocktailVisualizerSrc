@@ -11,6 +11,38 @@
         ["Sake",1],
         ["Grey Goose Le Citron Flavored Vodka",1.5],
         ["Asian Mary Mix",3]]
+    },
+    {
+      "name": "Paloma",
+      "glass": "Tumbler",
+      "ingredients": [
+        ["Tequila",2],
+        ["Fresh lime juice",0.5],
+        ["Grapefruit soda",3]]
+    },
+    {
+      "name": "Dark ’n Stormy",
+      "glass": "Tumbler",
+      "ingredients": [
+        ["Gosling's Black Seal rum",1.5],
+        ["Stormy ginger beer",4]]
+    },
+    {
+      "name": "Greyhound",
+      "glass": "Tumbler",
+      "ingredients": [
+        ["Vodka",1.5],
+        ["Grapefruit juice",4]]
+    },
+    {
+      "name": "Bourbon Lift",
+      "glass": "Tumbler",
+      "ingredients": [
+        ["Maker's Mark Bourbon",1.5],
+        ["Heavy cream",0.5],
+        ["House Spirits Coffee Liqueur",0.5],
+        ["Almond orgeat",0.5],
+        ["Club soda",2.5]]
     }]
   },
   {
@@ -31,6 +63,21 @@
         ["Chile de árbol-infused St-Germain",1],
         ["Leopold Brothers Absinthe Verte",1],
         ["Lime juice",0.03]] 
+    },
+    {
+      "name": "Kamikaze",
+      "glass": "Shot",
+      "ingredients": [
+        ["Vodka",2],
+        ["Orange liqueur",0.75],
+        ["Fresh lime juice",0.75]] 
+    },
+    {
+      "name": "Tequila Furnace",
+      "glass": "Shot",
+      "ingredients": [
+        ["El Tesoro Platinum Tequila",2],
+        ["Tabasco sauce",0.03]]
     }]
   },
   {
@@ -43,6 +90,94 @@
           ["Gin",2.5],
           ["Dry vermouth",0.5],
           ["Orange bitters",0.08]]
+      },
+      {
+        "name": "French Martini",
+        "glass": "Martini",
+        "ingredients": [
+          ["Vodka",2],
+          ["Pineapple juice",1.75],
+          ["Crème de cassis liqueur", 0.25]]
+      },
+      {
+        "name": "Marguerite",
+        "glass": "Martini",
+        "ingredients": [
+          ["Plymouth gin",1],
+          ["Noilly Prat dry vermouth",1],
+          ["Regans Orange Bitters No. 6", 0.03]]
+      },
+      {
+        "name": "Vesper",
+        "glass": "Martini",
+        "ingredients": [
+          ["Gin",3],
+          ["Vodka",1],
+          ["Lillet blanc apéritif", 0.5]]
+      },
+      {
+        "name": "Gibson",
+        "glass": "Martini",
+        "ingredients": [
+          ["Gin/Vodka",2.5],
+          ["Dry vermouth",0.5]]
+      },
+      {
+        "name": "Aviation",
+        "glass": "Martini",
+        "ingredients": [
+          ["Gin",2],
+          ["Maraschino liqueur",0.5],
+          ["Crème de violette/Crème Yvette",0.25],
+          ["Fresh lemon juice",0.75]]
+      },
+      {
+        "name": "Vieux Carré",
+        "glass": "Martini",
+        "ingredients": [
+          ["Dale DeGroff's Pimento Aromatic Bitters",0.12],
+          ["Bénédictine",0.33],
+          ["Sweet vermouth",0.75],
+          ["Cognac",0.75],
+          ["George Dickel Rye Whiskey",0.75]]
       }]
+    },
+    {
+      "catName": "Highball", 
+      "cocktails":[ 
+        {
+          "name": "Moscow Mule",
+          "glass": "Highball",
+          "ingredients": [
+            ["Vodka",2],
+            ["Ginger beer",3],
+            ["Fresh lime juice",1]]
+        },
+        {
+          "name": "Don Julio’s Bloody Maria",
+          "glass": "Highball",
+          "ingredients": [
+            ["Don Julio Reposado Tequila",1.5],
+            ["Tabasco Hot Pepper Sauce",0.06],
+            ["Worcestershire sauce",0.08],
+            ["Lime juice",0.33],
+            ["Tomato juice",8]]
+        },
+        {
+          "name": "Partida Paloma",
+          "glass": "Highball",
+          "ingredients": [
+            ["Partida blanco tequila",2],
+            ["Grapefruit soda",8]]
+        },
+        {
+          "name": "Lagerita",
+          "glass": "Highball",
+          "ingredients": [
+            ["Cabeza Tequila",2],
+            ["Cointreau",0.75],
+            ["Lime juice",1],
+            ["Modelo Especial Beer",4]]
+        }]
     }]
 }
