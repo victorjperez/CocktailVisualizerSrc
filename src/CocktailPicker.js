@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+
+import CocktailVisualizer from './ImageUtilities';
+import Recipe from './RecipeUtilities';
+
 import CocktailFile from './cocktails.json';
 import './CocktailPicker.css';
-import CocktailVisualizer from './ImageUtilities';
+
 import add from './assets/add.svg';
 import multiply from './assets/multiply.svg';
-
 import martiniGlass from './assets/martini-glass.svg';
 import shotGlass from './assets/shot-glass.svg';
 import tumblerGlass from './assets/tumbler-glass.svg';
@@ -156,10 +159,13 @@ class PageElements extends React.Component {
   render() {
     console.log(this.state.name);
     return (
-      <div className="main-view">
+      <React.Fragment>
         <PickerFrame drinkData = { loadData() } onDrinkUpdate = { this.selectDrink } selectedDrinkName = { this.state.name } />
-        <CocktailVisualizer drink={this.state} />
-      </div>
+        <div className="main-viewer">
+          <CocktailVisualizer drink={this.state} />
+          <Recipe drink={this.state} />
+        </div>
+      </React.Fragment>
     );
   }
 }
