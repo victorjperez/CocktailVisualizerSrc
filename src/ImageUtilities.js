@@ -11,7 +11,7 @@ var glassSVG = [
             ,
             <g>
                 <title>Frame</title>
-                <path stroke="#fff" id="glassFrame" d="m293.97029,2.67907l-53.79157,594.28902l-179.30526,0l-53.79156,-594.28902l286.88838,0l0.00001,0z" strokeWidth="10" fill="none" />
+                <path stroke="#f0cedd" id="glassFrame" d="m293.97029,2.67907l-53.79157,594.28902l-179.30526,0l-53.79156,-594.28902l286.88838,0l0.00001,0z" strokeWidth="10" fill="none" />
             </g>
     ],
     ["Shot", "1.5","300", "300",
@@ -23,7 +23,7 @@ var glassSVG = [
         ,
         <g>
             <title>Frame</title>
-            <path stroke="#fff" transform="rotate(179.93980407714844 150.3798828125,149.98588562011716) " d="m6.19236,294.73707l54.07032,-289.50238l180.2344,0l54.0703,289.50238l-288.37501,0z" strokeWidth="10" fill="none" />
+            <path stroke="#f0cedd" transform="rotate(179.93980407714844 150.3798828125,149.98588562011716) " d="m6.19236,294.73707l54.07032,-289.50238l180.2344,0l54.0703,289.50238l-288.37501,0z" strokeWidth="10" fill="none" />
         </g>
     ],
     ["Martini", "3.5", "400", "600",
@@ -34,10 +34,10 @@ var glassSVG = [
         ,
         <g>
             <title>Frame</title>
-            <line stroke="#fff" fill="none" strokeWidth="10" x1="182.43752" y1="267.65625" x2="182.43752" y2="569.24905"  />
-            <path stroke="#fff" fill="none" strokeWidth="10" d="m10.49959,293.75633l189.50064,-288.425l189.50064,288.425l-379.00128,0l-0.00001,0z"  transform="rotate(180 200.00022888183594,149.54383850097656) " />
-            <line stroke="#fff" fill="none" strokeWidth="10" x1="218.34375" y1="264.92625" x2="218.34375" y2="569.40187"  />
-            <path stroke="#fff" fill="none" strokeWidth="10" d="m47.54474,592.5962l152.64842,-24.1875l152.64842,24.1875l-305.29688,0l0.00003,0z" />
+            <line stroke="#f0cedd" fill="none" strokeWidth="10" x1="182.43752" y1="267.65625" x2="182.43752" y2="569.24905"  />
+            <path stroke="#f0cedd" fill="none" strokeWidth="10" d="m10.49959,293.75633l189.50064,-288.425l189.50064,288.425l-379.00128,0l-0.00001,0z"  transform="rotate(180 200.00022888183594,149.54383850097656) " />
+            <line stroke="#f0cedd" fill="none" strokeWidth="10" x1="218.34375" y1="264.92625" x2="218.34375" y2="569.40187"  />
+            <path stroke="#f0cedd" fill="none" strokeWidth="10" d="m47.54474,592.5962l152.64842,-24.1875l152.64842,24.1875l-305.29688,0l0.00003,0z" />
         </g>
     ],
     ["Highball", "8", "350", "500",
@@ -49,7 +49,7 @@ var glassSVG = [
         ,
         <g>
             <title>Frame</title>
-            <path stroke="#fff" transform="rotate(-180 174.92889404296878,249.73001098632812) " fill-opacity="0.09" d="m5.65277,494.48001l63.47855,-489.5l211.59518,0l63.47853,489.5l-338.55227,0z" strokeWidth="10" fill="none" />
+            <path stroke="#f0cedd" transform="rotate(-180 174.92889404296878,249.73001098632812) " fill-opacity="0.09" d="m5.65277,494.48001l63.47855,-489.5l211.59518,0l63.47853,489.5l-338.55227,0z" strokeWidth="10" fill="none" />
         </g>
     ],
 ];
@@ -129,7 +129,6 @@ class CocktailVisualizer extends React.Component {
             <FindGlass drink={this.props.drink} />
         );
     }
-    
 }
 
 export default CocktailVisualizer; 

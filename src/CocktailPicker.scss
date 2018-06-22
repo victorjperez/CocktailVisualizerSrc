@@ -1,20 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
-body{
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+$WindowPrimary: #33212F;
+$WindowSecondary: #53363f;
+$HighlightPrimary: #EFE8BA;
+$HighlightSecondary: #A4A387;
+$Background: #62374A;
+
+body {
   font-family: 'Abril Fatface', cursive;
-  background-color: #614242;
+  background-color: $Background;
+
 }
+
 .picker-frame {
-  height: 100%;
-  width: 400px;
-  border-radius: 15px;
+  width: 100%;
+  border-radius: 10px;
   text-align: center;
-  background-color: lightgray;
-  float: right;
+  margin: 0 auto;
   box-shadow: 3px 4px 20px black;
+  background-color: $WindowSecondary;
 }
 .picker-frame__inner {
   overflow-y: scroll;
-  height: 400px;
+  height: 200px;
   
   &::-webkit-scrollbar {
     width: .75em;
@@ -24,24 +32,23 @@ body{
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   }
   &::-webkit-scrollbar-thumb {
-    background-color: lightslategray;
-    outline: 1px solid slategrey;
+    background-color: $Background;
+    outline: 1px solid $HighlightSecondary;
     border-radius: 50px;
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   }
 }
 .picker-frame__header {
   color: white;
-  background-color: lightslategray;
-  text-shadow: 0px 1px 0px rgba(212, 212, 212, 0.3), 0px -1px 0px rgba(0,0,0,.7);
+  background-color: $WindowSecondary;
   font-size: 30px;
   padding: 15px;
-  border-radius: 15px 15px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 .picker-frame__footer {
-  background-color: lightslategray;
+  background-color: $WindowSecondary;
   padding: 15px;
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 10px 10px;
 }
 .picker-frame__category-plate {
   padding: 5px;
@@ -49,6 +56,8 @@ body{
   text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
   position: relative;
   box-shadow: 0px 5px 10px rgba(15, 15, 15, 0.281);
+  color: white;
+  background-color: $WindowPrimary;
   &:hover {
     cursor: pointer;
   }
@@ -64,60 +73,55 @@ body{
     right: 3%;
     top: 35%;
     position: absolute;
+
   }
-  &--Shot {
-    background-color: lightseagreen;
-    color: darkcyan;
-  }
-  &--Tumbler{
-    background-color: lightcoral;
-    color: darkred;
-  }
-  &--Martini {
-    background-color: goldenrod;
-    color: darkgoldenrod;
-  }
-  &--Highball {
-    background-color: olivedrab;
-    color: darkolivegreen;
+  &:nth-of-type(even){
+    background-color: $WindowSecondary;
   }
 }
 
 .picker-frame__list-item {
   padding: 5px;
-  color: darkslategray;
+  color: $WindowPrimary;
   transition-duration: .3s;
-  background-color: lightsteelblue;
+  background-color: $HighlightPrimary;
   &:nth-child(odd){
-    background-color: lightgrey;
+    background-color: $HighlightSecondary;
   }
   &--selected {
-    background-color: lightslategray;
+    background-color: $WindowPrimary;
     color: whitesmoke;
     &:nth-child(odd){
-      background-color: lightslategray;
+      background-color: $WindowPrimary;
     }
   }
   &:hover  {
-    background-color: lightslategray;
+    background-color: $WindowPrimary;
     cursor: pointer;
     user-select: none; 
+    color: white;
   }
 
 }
 .main-viewer{
-  height: 600px;
-  width: 42%;
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translateY(-50%);
+  width: 100%;
+  padding-top: 20px;
+  margin: 0 auto;
 }
 .glass-ingredient-view {
   float: left;
   color: white;
-  height: 100%;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  background-color: $WindowSecondary;
+  margin-left: -10px;
+  padding: 10px;
   svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     .small-text{
       fill: white;
       font-size: 13px;
@@ -126,8 +130,7 @@ body{
 }
 .recipe-frame {
   color: white;
-  padding: 10% 0 0 400px;
-
+  margin: 620px auto;
   h1 {
     text-align: center;
   }
@@ -141,10 +144,86 @@ body{
       flex-direction: column;
       height: 10px;
       margin-left: 20px;
+      font-size: 14px;
     }
   }
   .recipe-frame__warning{
     font-size: 12px;
     text-align: center;
+  }
+}
+
+.banner {
+  background-color: $WindowPrimary;
+  color: white;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 25px;
+  box-shadow: 0px 5px 10px rgba(15, 15, 15, 0.281);
+  border-radius: 10px;
+  padding-bottom: 15px;
+  .banner__info-image {
+    margin-left: 5px;
+    transform: translate(0, 30%);
+  }
+  .banner__info-image:hover {
+    cursor: pointer;
+  }
+  .banner__info {
+    font-family: 'Roboto', sans-serif;
+    background-color: $WindowSecondary;
+    margin-top: 15px;
+    padding: 5px 30px;
+
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 13px;
+    }
+    a {
+      text-decoration:  none;
+      color: lightgrey;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .picker-frame {
+    width: 400px;
+    float: right;
+
+  }
+  .picker-frame__inner {  
+    height: 400px;
+  }
+  .main-viewer{
+    height: 600px;
+    width: 42%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+  }
+  .glass-ingredient-view {
+    width: 400px;
+    background-color: $Background;
+    margin-left: 0;
+    padding: 0;
+
+  }
+  .recipe-frame {
+    padding: 10% 0 0 400px;
+    margin: 0;
+    .recipe-frame__ingredient p {
+      font-size: inherit;
+    }
+  }
+  .banner {
+    width: 300px;
+    float: left;
+    margin: 0;
   }
 }

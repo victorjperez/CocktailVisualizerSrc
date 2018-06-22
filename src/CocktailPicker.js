@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import CocktailVisualizer from './ImageUtilities';
 import Recipe from './RecipeUtilities';
+import InfoBanner from './Info';
 
 import CocktailFile from './cocktails.json';
 import './CocktailPicker.css';
@@ -90,7 +91,7 @@ class CategoryHeader extends React.Component {
     this.props.onVisibilityToggle();
   }
   render() {
-    var bemClassName = "picker-frame__category-plate picker-frame__category-plate--" + this.props.categoryName;
+    var bemClassName = "picker-frame__category-plate picker-frame__category-plate";//--" + this.props.categoryName;
     return (
       <div onClick={this.handleClick} className={bemClassName}>
         <img className="picker-frame__glass-icon" src={getGlassImage(this.props.categoryName)} alt="" />
@@ -130,7 +131,7 @@ class PickerFrame extends React.Component {
     });
     return (
       <div className="picker-frame">
-        <div className="picker-frame__header">Cocktail Picker </div>
+        <div className="picker-frame__header">Cocktails</div>
         <div className="picker-frame__inner">{renderedCategories}</div>
         <div className="picker-frame__footer" />
       </div>
@@ -160,6 +161,7 @@ class PageElements extends React.Component {
     console.log(this.state.name);
     return (
       <React.Fragment>
+        <InfoBanner />
         <PickerFrame drinkData = { loadData() } onDrinkUpdate = { this.selectDrink } selectedDrinkName = { this.state.name } />
         <div className="main-viewer">
           <CocktailVisualizer drink={this.state} />
