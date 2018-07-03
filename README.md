@@ -1,4 +1,4 @@
-Cocktail Visualizer is a dynamic viewer for mixed drinks using JSON data and SVG. This is the source code, and the page is located [here](https://github.com/victorjperez/CocktailVisualizer.)
+Cocktail Visualizer is a dynamic viewer for mixed drinks using JSON data and SVG. This is the source code, and the page is located [here](https://github.com/victorjperez/CocktailVisualizer).
 ## Information
 This is the first full project I've created using React, and it was mostly made to heighten my understanding of the framework and what it can be used for. I chose SVG for two main reasons; primarily because it had the best performance for what I was trying to accomplish, and secondarily because I wanted to learn more about SVG as a whole.
 ### Loading and Visualizing Data
