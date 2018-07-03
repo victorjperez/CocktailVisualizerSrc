@@ -5,7 +5,7 @@ function ProcessIngredients(props) {
     var display = [];
     var lineBuild;
 
-    display.push(<p className="recipe-frame__warning" key="warn">* Visual representation, may not be exact</p>);
+    display.push(<p className="recipe-frame__warning" key="warn">*Visual may not be exact</p>);
     (props.ingredients).forEach(ingredient => {
         lineBuild = (
         <div className="recipe-frame__ingredient" key={ingredient[0]}> 
